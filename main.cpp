@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "planner.hpp"
+#include "flujo.hpp"
 #include "printer.hpp"
 
 using namespace std;
@@ -40,4 +41,23 @@ int main () {
     pr.print(p);
 
 
+    //E3
+    vector<vector<int>> flujos = {
+        {0, 48, 12, 18},
+        {52, 0, 42, 32},
+        {18, 46, 0, 56},
+        {24, 36, 52, 0}
+    };
+
+    int source = 0;
+    int sink = 3;
+
+    Flujo flujo(flujos);
+    
+    // Find max flow from the source node to the sink node
+    int maxFlow = flujo.fordFulkerson(source, sink);
+    cout << "The maximum possible flow from node " << source << " to node " << sink << " is " << maxFlow << endl;
+
+
+    pr.printMaximumFlow(flujo.getFlow());
 };

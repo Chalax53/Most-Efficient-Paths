@@ -5,9 +5,19 @@ void Printer::print(Planner& matrix){
     vector<vector<int>>& adjMatrix = matrix.getAdjMatrix();
 
     cout << "Vertice \tPeso" << endl;
-for (int i = 1; i < static_cast<int>(parent.size()); i++) {
-    cout << parent[i] << " - " << i << " \t\t" << adjMatrix[parent[i]][i] << "\n";
-}
+    for (int i = 1; i < static_cast<int>(parent.size()); i++) {
+        cout << parent[i] << " - " << i << " \t\t" << adjMatrix[parent[i]][i] << "\n";
+    }
 
 }
 
+
+void Printer::printMaximumFlow(const vector<vector<int>>& flow) {
+    for (size_t i = 0; i < flow.size(); i++) {
+        for (size_t j = 0; j < flow[i].size(); j++) {
+            if (flow[i][j] > 0) {
+                cout << "Flow from " << i << " to " << j << ": " << flow[i][j] << endl;
+            }
+        }
+    }
+}
