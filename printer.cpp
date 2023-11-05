@@ -13,10 +13,10 @@ void Printer::print(Planner& matrix){
 
 
 void Printer::printMaximumFlow(const vector<vector<int>>& flow) {
-    for (size_t i = 0; i < flow.size(); i++) {
-        for (size_t j = 0; j < flow[i].size(); j++) {
+    for (int i = 0; i < flow.size(); i++) {
+        for (int j = 0; j < flow[i].size(); j++) {
             if (flow[i][j] > 0) {
-                cout << "Flow from " << i << " to " << j << ": " << flow[i][j] << endl;
+                cout << "Max flow from " << i << " to " << j << " has been set to: " << flow[i][j] << endl;
             }
         }
     }
