@@ -7,15 +7,15 @@ using namespace std;
 class Planner {
 
 public:
-    int nodos;
-    vector<vector<int>> adjMatrix;
+    int nodos; 
+    vector<vector<int> > adjMatrix;
     vector<bool> selected;
     vector<int> minWeight;
     vector<int> parent;
     int findMinVertex();
 
 
-    Planner(int nodos, const vector<vector<int>>& matrix);
+    Planner(int nodos, const vector<vector<int> >& matrix);
     void primMST();
 
 

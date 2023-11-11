@@ -1,13 +1,14 @@
 #include "planner.hpp"
 #include <iostream>
 #include <climits>
+using namespace std;
 
 //constructor
-Planner::Planner(int nodos, const vector<vector<int>>& matrix) {
-    this->nodos = nodos; //global seter
+Planner::Planner(int nodos, const vector<vector<int> >& matrix) {
+    this->nodos = nodos; //global setter
     adjMatrix = matrix;
     selected = vector<bool>(nodos, false);
-    minWeight = vector<int>(nodos, INT_MAX);
+    minWeight = vector<int>(nodos, INT_MAX); //IN_MAX means infinity
     parent = vector<int>(nodos, -1);
 }
 

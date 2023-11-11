@@ -1,6 +1,7 @@
 #include "flujo.hpp"
+using namespace std;
 
-Flujo::Flujo(const vector<vector<int>>& capacityMatrix) : capacity(capacityMatrix), numVertices(capacityMatrix.size()) {
+Flujo::Flujo(const vector<vector<int> >& capacityMatrix) : capacity(capacityMatrix), numVertices(capacityMatrix.size()) {
     flow = vector<vector<int>>(numVertices, vector<int>(numVertices, 0));
     parent.resize(numVertices);
 }

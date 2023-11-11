@@ -1,6 +1,7 @@
+#pragma once
 #include <vector>
 #include <climits>
-#include <cstring> // for memset
+#include <cstring>
 
 using namespace std;
 
@@ -11,10 +12,10 @@ private:
     vector<vector<int>> flow;
     vector<int> parent;
     
-    bool bfs(int source, int sink); // Breadth-first search to find augmenting path
+    bool bfs(int source, int sink); 
 
 public:
     Flujo(const vector<vector<int>>& capacityMatrix);
-    int fordFulkerson(int source, int sink); // Main algorithm method
+    int fordFulkerson(int source, int sink);
     const vector<vector<int>>& getFlow() const;
 };

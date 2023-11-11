@@ -1,4 +1,5 @@
 #include "printer.hpp"
+using namespace std;
 
 void Printer::print(Planner& matrix){
     vector<int>& parent = matrix.getParent();

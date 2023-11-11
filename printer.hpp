@@ -1,3 +1,4 @@
+#pragma once
 #include "planner.hpp"
 #include <vector>
 #include <iostream>
